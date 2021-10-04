@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,17 +13,36 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rock_the_Boat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="43" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-8P-KQ6">
-                                <rect key="frame" x="41" y="178" width="293.5" height="410"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="str_Rock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-rv-gIz">
+                                <rect key="frame" x="363" y="50" width="170" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="height" multiplier="34:11" id="SKO-A2-sit"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="44"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="SKO-A2-sit"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="SKO-A2-sit"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="43" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-8P-KQ6">
+                                <rect key="frame" x="149.5" y="140" width="477.5" height="184.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boat-n-person" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-jy-XhE">
                                         <rect key="frame" x="0.0" y="0.0" width="293.5" height="184.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-oy-A2K">
-                                        <rect key="frame" x="76" y="246" width="141" height="164"/>
+                                        <rect key="frame" x="336.5" y="10.5" width="141" height="164"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSi-Tj-Bh8">
                                                 <rect key="frame" x="0.0" y="0.0" width="141" height="41"/>
@@ -66,67 +85,62 @@
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Xrb-BL-uvf" firstAttribute="width" secondItem="zSi-Tj-Bh8" secondAttribute="width" id="0vu-cE-vAJ"/>
+                                            <constraint firstItem="Web-NR-dWL" firstAttribute="height" secondItem="zSi-Tj-Bh8" secondAttribute="height" id="LO3-zK-eDR"/>
+                                            <constraint firstItem="nKY-14-HRi" firstAttribute="width" secondItem="zSi-Tj-Bh8" secondAttribute="width" id="NbH-gw-aDT"/>
+                                            <constraint firstItem="Web-NR-dWL" firstAttribute="width" secondItem="zSi-Tj-Bh8" secondAttribute="width" id="Ztf-Wq-MJX"/>
+                                            <constraint firstItem="nKY-14-HRi" firstAttribute="height" secondItem="zSi-Tj-Bh8" secondAttribute="height" id="aIe-3m-0NH"/>
+                                            <constraint firstItem="Xrb-BL-uvf" firstAttribute="height" secondItem="zSi-Tj-Bh8" secondAttribute="height" id="czh-Re-2wc"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Xrb-BL-uvf" firstAttribute="centerX" secondItem="zzm-8P-KQ6" secondAttribute="centerX" id="2lj-iw-XRT"/>
-                                </constraints>
-                                <variation key="widthClass=compact" spacing="90">
-                                    <mask key="constraints">
-                                        <exclude reference="2lj-iw-XRT"/>
-                                    </mask>
-                                </variation>
+                                <variation key="widthClass=compact" spacing="90"/>
                                 <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="str_Rock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-rv-gIz">
-                                <rect key="frame" x="55" y="117" width="279" height="55"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="44"/>
-                                <color key="textColor" systemColor="systemOrangeColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.23628015811558647" green="0.43902285826194926" blue="0.81182401143398475" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="DhG-jy-XhE" firstAttribute="top" secondItem="cQP-rv-gIz" secondAttribute="bottom" constant="62" id="119-VU-fAi"/>
-                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8FT-1h-s39"/>
-                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AYF-h6-iSG"/>
-                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IBK-NG-nok"/>
-                            <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="IWy-8r-20o"/>
-                            <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KXc-uf-2Dw"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zzm-8P-KQ6" secondAttribute="bottom" constant="58" id="NZL-xU-fjU"/>
-                            <constraint firstItem="DhG-jy-XhE" firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="width" multiplier="1.06934" id="ZEa-2U-ytR"/>
-                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aDK-DL-ngA"/>
-                            <constraint firstItem="DhG-jy-XhE" firstAttribute="firstBaseline" secondItem="cQP-rv-gIz" secondAttribute="baseline" constant="39.5" symbolType="layoutAnchor" id="cDe-wk-Cxy"/>
-                            <constraint firstItem="DhG-jy-XhE" firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="height" multiplier="294:127" id="ey9-39-gwb"/>
-                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f4E-fl-E2D"/>
-                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pQm-a5-o0f"/>
-                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="293:667" id="vb3-7R-vb2"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1La-0a-eug"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71.5" id="HU0-D3-aFZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zzm-8P-KQ6" secondAttribute="trailing" constant="71" id="JKO-3R-sCI"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="71" id="KIp-d1-h40"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zzm-8P-KQ6" secondAttribute="bottom" constant="77.5" id="Ogl-fh-fi1"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Oqb-QQ-O8D"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vzi-86-lAq"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="top" secondItem="cQP-rv-gIz" secondAttribute="bottom" constant="8" symbolic="YES" id="eVi-uX-Njo"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="fqA-Dx-WOA"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-60" id="mKI-kx-or4"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="mUz-lN-B5T"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ofb-oU-YHd"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="KXc-uf-2Dw"/>
-                                <exclude reference="pQm-a5-o0f"/>
-                                <exclude reference="cDe-wk-Cxy"/>
-                                <exclude reference="f4E-fl-E2D"/>
+                                <exclude reference="JKO-3R-sCI"/>
+                                <exclude reference="Ogl-fh-fi1"/>
+                                <exclude reference="1La-0a-eug"/>
+                                <exclude reference="HU0-D3-aFZ"/>
+                                <exclude reference="KIp-d1-h40"/>
+                                <exclude reference="eVi-uX-Njo"/>
+                                <exclude reference="Oqb-QQ-O8D"/>
+                                <exclude reference="ofb-oU-YHd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
-                                <exclude reference="NZL-xU-fjU"/>
-                                <exclude reference="8FT-1h-s39"/>
-                                <exclude reference="IBK-NG-nok"/>
-                                <exclude reference="IWy-8r-20o"/>
-                                <include reference="KXc-uf-2Dw"/>
-                                <exclude reference="aDK-DL-ngA"/>
-                                <include reference="pQm-a5-o0f"/>
-                                <exclude reference="119-VU-fAi"/>
-                                <exclude reference="ZEa-2U-ytR"/>
-                                <include reference="cDe-wk-Cxy"/>
-                                <exclude reference="ey9-39-gwb"/>
-                                <exclude reference="AYF-h6-iSG"/>
-                                <include reference="f4E-fl-E2D"/>
-                                <exclude reference="vb3-7R-vb2"/>
+                                <exclude reference="JKO-3R-sCI"/>
+                                <include reference="Ogl-fh-fi1"/>
+                                <include reference="1La-0a-eug"/>
+                                <exclude reference="HU0-D3-aFZ"/>
+                                <include reference="KIp-d1-h40"/>
+                                <include reference="eVi-uX-Njo"/>
+                                <exclude reference="fqA-Dx-WOA"/>
+                                <exclude reference="mKI-kx-or4"/>
+                                <include reference="Oqb-QQ-O8D"/>
+                                <exclude reference="Vzi-86-lAq"/>
+                                <exclude reference="mUz-lN-B5T"/>
+                                <include reference="ofb-oU-YHd"/>
                             </mask>
                         </variation>
                     </view>
@@ -135,7 +149,7 @@
                         <outlet property="boatImg" destination="DhG-jy-XhE" id="S7F-3f-feI"/>
                         <outlet property="constantAnimBtn" destination="nKY-14-HRi" id="z6W-72-b2z"/>
                         <outlet property="fadeAnimBtn" destination="zSi-Tj-Bh8" id="LVN-Fa-RC6"/>
-                        <outlet property="labelTopConstraint" destination="KXc-uf-2Dw" id="vSQ-OL-RDk"/>
+                        <outlet property="labelTopConstraint" destination="eVi-uX-Njo" id="UV1-tJ-xnm"/>
                         <outlet property="nestedAnimBtn" destination="Web-NR-dWL" id="37Q-w9-o6J"/>
                         <outlet property="positionAnimBtn" destination="Xrb-BL-uvf" id="YM6-py-NiF"/>
                         <outlet property="stackview" destination="a4z-oy-A2K" id="iLN-7y-i7L"/>
