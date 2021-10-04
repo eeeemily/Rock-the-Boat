@@ -1,24 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Rock_the_Boat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="43" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-8P-KQ6">
+                                <rect key="frame" x="41" y="229.5" width="293" height="379.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent-boat-n-person" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-jy-XhE">
+                                        <rect key="frame" x="0.0" y="0.0" width="293" height="184"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-oy-A2K">
+                                        <rect key="frame" x="117" y="199" width="59" height="180.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSi-Tj-Bh8">
+                                                <rect key="frame" x="0.0" y="0.0" width="59" height="41"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-BL-uvf">
+                                                <rect key="frame" x="0.0" y="41" width="59" height="57.5"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-NR-dWL">
+                                                <rect key="frame" x="0.0" y="98.5" width="59" height="41"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-14-HRi">
+                                                <rect key="frame" x="0.0" y="139.5" width="59" height="41"/>
+                                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                </state>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Xrb-BL-uvf" firstAttribute="centerX" secondItem="zzm-8P-KQ6" secondAttribute="centerX" id="2lj-iw-XRT"/>
+                                </constraints>
+                                <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rock the Boat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-rv-gIz">
+                                <rect key="frame" x="60" y="20" width="274" height="127"/>
+                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="44"/>
+                                <color key="textColor" systemColor="systemOrangeColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DhG-jy-XhE" firstAttribute="top" secondItem="cQP-rv-gIz" secondAttribute="bottom" constant="62" id="119-VU-fAi"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8FT-1h-s39"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AYF-h6-iSG"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IBK-NG-nok"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="IWy-8r-20o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zzm-8P-KQ6" secondAttribute="bottom" constant="58" id="NZL-xU-fjU"/>
+                            <constraint firstItem="DhG-jy-XhE" firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="width" multiplier="1.06934" id="ZEa-2U-ytR"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aDK-DL-ngA"/>
+                            <constraint firstItem="DhG-jy-XhE" firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="height" multiplier="294:127" id="ey9-39-gwb"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="293:667" id="vb3-7R-vb2"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="26.399999999999999" y="86.806596701649184"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="transparent-boat-n-person" width="293.5" height="184.5"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
