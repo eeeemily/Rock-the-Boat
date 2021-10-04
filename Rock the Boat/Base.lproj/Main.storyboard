@@ -149,6 +149,7 @@
                         <outlet property="boatImg" destination="DhG-jy-XhE" id="S7F-3f-feI"/>
                         <outlet property="constantAnimBtn" destination="nKY-14-HRi" id="z6W-72-b2z"/>
                         <outlet property="fadeAnimBtn" destination="zSi-Tj-Bh8" id="LVN-Fa-RC6"/>
+                        <outlet property="horizontalStackViewConstraint" destination="Vzi-86-lAq" id="gtA-Ji-Gnd"/>
                         <outlet property="labelTopConstraint" destination="eVi-uX-Njo" id="UV1-tJ-xnm"/>
                         <outlet property="nestedAnimBtn" destination="Web-NR-dWL" id="37Q-w9-o6J"/>
                         <outlet property="positionAnimBtn" destination="Xrb-BL-uvf" id="YM6-py-NiF"/>

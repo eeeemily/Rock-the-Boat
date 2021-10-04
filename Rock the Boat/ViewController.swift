@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var stackview: UIStackView!
     var animationCount = 0
     @IBOutlet weak var labelTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var horizontalStackViewConstraint: NSLayoutConstraint!
     let boatModel = BoatModel()
     var needsRecover = false
     override func viewWillAppear(_ animated: Bool) {
@@ -52,17 +53,17 @@ class ViewController: UIViewController {
     
     @IBAction func nestedAnim(_ sender: Any) {
         UIView.animate(withDuration: 0.5, animations: {
-            self.boatImg?.rotate(by: -Double.pi / 2, with: CGPoint(x: -0.3, y: 0.3))
+            self.boatImg?.rotate(by: 0.2, with: CGPoint(x: -0.3, y: 0.3))
         }, completion: { _ in
             UIView.animate(withDuration: 0.5, animations: {
-                self.boatImg?.rotate(by: 0.0, with: CGPoint(x: -0.2, y: 0.2))
-                self.boatImg?.rotate(by: 0.0, with: CGPoint(x: 0.3, y: 0.3))
+                self.boatImg?.rotate(by: 0.3, with: CGPoint(x: -0.2, y: 0.3))
+                self.boatImg?.rotate(by: 0.0, with: CGPoint(x: 0.3, y: 0.1))
             }, completion: { _ in
                 UIView.animate(withDuration: 0.5, animations: {
-                    self.boatImg?.rotate(by: 0.0, with: CGPoint(x: 0.5, y: -0.3))
+                    self.boatImg?.rotate(by: -0.5, with: CGPoint(x: -0.2, y: -0.1))
                 }, completion: { _ in
                     UIView.animate(withDuration: 0.5, animations: {
-                        self.boatImg?.rotate(by: 0.0, with: CGPoint(x: 0.5, y: -0.3))
+                        self.boatImg?.rotate(by: 0.2, with: CGPoint(x: 0.3, y: -0.3))
                     })
                 })
             })
@@ -74,12 +75,16 @@ class ViewController: UIViewController {
 
         UIView.animate(withDuration: 1.2, delay: delay, options: [.curveEaseInOut], animations: {
             self.labelTopConstraint?.constant += yPos
+            self.horizontalStackViewConstraint?.constant += yPos
+
             self.view.layoutIfNeeded()
         }, completion: { _ in
             let yPos2 = -self.view.frame.height
 
             UIView.animate(withDuration: 1.2, delay: delay, options: [.curveEaseInOut], animations: {
                 self.labelTopConstraint?.constant += yPos2
+                self.horizontalStackViewConstraint?.constant += yPos2
+
                 self.view.layoutIfNeeded()
             })
         
