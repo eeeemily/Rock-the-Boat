@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="43" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-8P-KQ6">
-                                <rect key="frame" x="41" y="229.5" width="293" height="379.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="43" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-8P-KQ6">
+                                <rect key="frame" x="41" y="141" width="293.5" height="410"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent-boat-n-person" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-jy-XhE">
-                                        <rect key="frame" x="0.0" y="0.0" width="293" height="184"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="294" height="184"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-oy-A2K">
-                                        <rect key="frame" x="117" y="199" width="59" height="180.5"/>
+                                        <rect key="frame" x="117" y="246" width="59" height="164"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSi-Tj-Bh8">
                                                 <rect key="frame" x="0.0" y="0.0" width="59" height="41"/>
@@ -32,22 +32,22 @@
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-BL-uvf">
-                                                <rect key="frame" x="0.0" y="41" width="59" height="57.5"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-BL-uvf">
+                                                <rect key="frame" x="0.0" y="41" width="59" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-NR-dWL">
-                                                <rect key="frame" x="0.0" y="98.5" width="59" height="41"/>
+                                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-NR-dWL">
+                                                <rect key="frame" x="0.0" y="82" width="59" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-14-HRi">
-                                                <rect key="frame" x="0.0" y="139.5" width="59" height="41"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-14-HRi">
+                                                <rect key="frame" x="0.0" y="123" width="59" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                 <state key="normal" title="Button">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
@@ -59,10 +59,15 @@
                                 <constraints>
                                     <constraint firstItem="Xrb-BL-uvf" firstAttribute="centerX" secondItem="zzm-8P-KQ6" secondAttribute="centerX" id="2lj-iw-XRT"/>
                                 </constraints>
+                                <variation key="widthClass=compact" spacing="90">
+                                    <mask key="constraints">
+                                        <exclude reference="2lj-iw-XRT"/>
+                                    </mask>
+                                </variation>
                                 <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rock the Boat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-rv-gIz">
-                                <rect key="frame" x="60" y="20" width="274" height="127"/>
+                                <rect key="frame" x="52" y="53" width="271" height="55"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="44"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
@@ -76,17 +81,47 @@
                             <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="AYF-h6-iSG"/>
                             <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IBK-NG-nok"/>
                             <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="41" id="IWy-8r-20o"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="KXc-uf-2Dw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zzm-8P-KQ6" secondAttribute="bottom" constant="58" id="NZL-xU-fjU"/>
                             <constraint firstItem="DhG-jy-XhE" firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="width" multiplier="1.06934" id="ZEa-2U-ytR"/>
                             <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aDK-DL-ngA"/>
+                            <constraint firstItem="DhG-jy-XhE" firstAttribute="firstBaseline" secondItem="cQP-rv-gIz" secondAttribute="baseline" constant="39.5" symbolType="layoutAnchor" id="cDe-wk-Cxy"/>
                             <constraint firstItem="DhG-jy-XhE" firstAttribute="width" secondItem="cQP-rv-gIz" secondAttribute="height" multiplier="294:127" id="ey9-39-gwb"/>
+                            <constraint firstItem="zzm-8P-KQ6" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="f4E-fl-E2D"/>
+                            <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pQm-a5-o0f"/>
                             <constraint firstItem="zzm-8P-KQ6" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="293:667" id="vb3-7R-vb2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="cDe-wk-Cxy"/>
+                                <exclude reference="f4E-fl-E2D"/>
+                                <exclude reference="KXc-uf-2Dw"/>
+                                <exclude reference="pQm-a5-o0f"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="NZL-xU-fjU"/>
+                                <exclude reference="119-VU-fAi"/>
+                                <exclude reference="ZEa-2U-ytR"/>
+                                <include reference="cDe-wk-Cxy"/>
+                                <exclude reference="ey9-39-gwb"/>
+                                <exclude reference="AYF-h6-iSG"/>
+                                <include reference="f4E-fl-E2D"/>
+                                <exclude reference="vb3-7R-vb2"/>
+                                <exclude reference="8FT-1h-s39"/>
+                                <exclude reference="IBK-NG-nok"/>
+                                <exclude reference="IWy-8r-20o"/>
+                                <include reference="KXc-uf-2Dw"/>
+                                <exclude reference="aDK-DL-ngA"/>
+                                <include reference="pQm-a5-o0f"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="26.399999999999999" y="86.806596701649184"/>
+            <point key="canvasLocation" x="24.800000000000001" y="85.007496251874073"/>
         </scene>
     </scenes>
     <resources>
