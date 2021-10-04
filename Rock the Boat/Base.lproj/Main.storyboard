@@ -19,8 +19,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" alignment="center" spacing="43" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zzm-8P-KQ6">
                                 <rect key="frame" x="41" y="178" width="293.5" height="410"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="transparent-boat-n-person" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-jy-XhE">
-                                        <rect key="frame" x="0.0" y="0.0" width="294" height="184"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boat-n-person" translatesAutoresizingMaskIntoConstraints="NO" id="DhG-jy-XhE">
+                                        <rect key="frame" x="0.0" y="0.0" width="293.5" height="184.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-oy-A2K">
                                         <rect key="frame" x="54" y="246" width="185" height="164"/>
@@ -31,6 +31,9 @@
                                                 <state key="normal" title="Fade in and out">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onFade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="joK-FC-Orl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-BL-uvf">
                                                 <rect key="frame" x="0.0" y="41" width="185" height="41"/>
@@ -38,6 +41,9 @@
                                                 <state key="normal" title="Positional Animation">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="onPositionalAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXh-Pc-lEn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-NR-dWL">
                                                 <rect key="frame" x="0.0" y="82" width="185" height="41"/>
@@ -45,6 +51,10 @@
                                                 <state key="normal" title="Nested Animation">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="nestedAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lB-Gx-KIA"/>
+                                                    <action selector="onPositionalAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLZ-BT-yXN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-14-HRi">
                                                 <rect key="frame" x="0.0" y="123" width="185" height="41"/>
@@ -52,6 +62,9 @@
                                                 <state key="normal" title="Constraint Animation">
                                                     <color key="titleColor" systemColor="systemIndigoColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="constraintAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5y-pH-3qh"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -93,15 +106,21 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="cDe-wk-Cxy"/>
-                                <exclude reference="f4E-fl-E2D"/>
                                 <exclude reference="KXc-uf-2Dw"/>
                                 <exclude reference="pQm-a5-o0f"/>
+                                <exclude reference="cDe-wk-Cxy"/>
+                                <exclude reference="f4E-fl-E2D"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="constraints">
                                 <exclude reference="NZL-xU-fjU"/>
+                                <exclude reference="8FT-1h-s39"/>
+                                <exclude reference="IBK-NG-nok"/>
+                                <exclude reference="IWy-8r-20o"/>
+                                <include reference="KXc-uf-2Dw"/>
+                                <exclude reference="aDK-DL-ngA"/>
+                                <include reference="pQm-a5-o0f"/>
                                 <exclude reference="119-VU-fAi"/>
                                 <exclude reference="ZEa-2U-ytR"/>
                                 <include reference="cDe-wk-Cxy"/>
@@ -109,15 +128,19 @@
                                 <exclude reference="AYF-h6-iSG"/>
                                 <include reference="f4E-fl-E2D"/>
                                 <exclude reference="vb3-7R-vb2"/>
-                                <exclude reference="8FT-1h-s39"/>
-                                <exclude reference="IBK-NG-nok"/>
-                                <exclude reference="IWy-8r-20o"/>
-                                <include reference="KXc-uf-2Dw"/>
-                                <exclude reference="aDK-DL-ngA"/>
-                                <include reference="pQm-a5-o0f"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="RockTheBoatLabel" destination="cQP-rv-gIz" id="ao5-4k-Wb8"/>
+                        <outlet property="boatImg" destination="DhG-jy-XhE" id="S7F-3f-feI"/>
+                        <outlet property="constantAnimBtn" destination="nKY-14-HRi" id="z6W-72-b2z"/>
+                        <outlet property="fadeAnimBtn" destination="zSi-Tj-Bh8" id="LVN-Fa-RC6"/>
+                        <outlet property="labelTopConstraint" destination="KXc-uf-2Dw" id="vSQ-OL-RDk"/>
+                        <outlet property="nestedAnimBtn" destination="Web-NR-dWL" id="37Q-w9-o6J"/>
+                        <outlet property="positionAnimBtn" destination="Xrb-BL-uvf" id="YM6-py-NiF"/>
+                        <outlet property="stackview" destination="a4z-oy-A2K" id="iLN-7y-i7L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -125,7 +148,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="transparent-boat-n-person" width="293.5" height="184.5"/>
+        <image name="boat-n-person" width="293.5" height="184.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
