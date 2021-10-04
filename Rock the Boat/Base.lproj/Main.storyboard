@@ -23,44 +23,43 @@
                                         <rect key="frame" x="0.0" y="0.0" width="293.5" height="184.5"/>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="a4z-oy-A2K">
-                                        <rect key="frame" x="54" y="246" width="185" height="164"/>
+                                        <rect key="frame" x="76" y="246" width="141" height="164"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zSi-Tj-Bh8">
-                                                <rect key="frame" x="0.0" y="0.0" width="185" height="41"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="141" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <state key="normal" title="Fade in and out">
-                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                <state key="normal" title="str_fade">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="onFade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="joK-FC-Orl"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xrb-BL-uvf">
-                                                <rect key="frame" x="0.0" y="41" width="185" height="41"/>
+                                                <rect key="frame" x="0.0" y="41" width="141" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <state key="normal" title="Positional Animation">
-                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                <state key="normal" title="str_positional">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="onPositionalAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oXh-Pc-lEn"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Web-NR-dWL">
-                                                <rect key="frame" x="0.0" y="82" width="185" height="41"/>
+                                                <rect key="frame" x="0.0" y="82" width="141" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <state key="normal" title="Nested Animation">
-                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                <state key="normal" title="str_nested">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="nestedAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3lB-Gx-KIA"/>
-                                                    <action selector="onPositionalAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLZ-BT-yXN"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKY-14-HRi">
-                                                <rect key="frame" x="0.0" y="123" width="185" height="41"/>
+                                                <rect key="frame" x="0.0" y="123" width="141" height="41"/>
                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
-                                                <state key="normal" title="Constraint Animation">
-                                                    <color key="titleColor" systemColor="systemIndigoColor"/>
+                                                <state key="normal" title="str_constrained">
+                                                    <color key="titleColor" systemColor="systemBackgroundColor"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="constraintAnim:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a5y-pH-3qh"/>
@@ -79,15 +78,15 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact" axis="vertical"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rock the Boat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-rv-gIz">
-                                <rect key="frame" x="55" y="117" width="279" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="str_Rock" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cQP-rv-gIz">
+                                <rect key="frame" x="55" y="117" width="279" height="55"/>
                                 <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="44"/>
                                 <color key="textColor" systemColor="systemOrangeColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.23628015811558647" green="0.43902285826194926" blue="0.81182401143398475" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="DhG-jy-XhE" firstAttribute="top" secondItem="cQP-rv-gIz" secondAttribute="bottom" constant="62" id="119-VU-fAi"/>
                             <constraint firstItem="cQP-rv-gIz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8FT-1h-s39"/>
@@ -151,9 +150,6 @@
         <image name="boat-n-person" width="293.5" height="184.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemIndigoColor">
-            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

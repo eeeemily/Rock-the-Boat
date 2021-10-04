@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Rock the Boat
+
+  Created by Zheng, Minghui on 10/4/21.
+  
+*/
+"str_fade"="Fade in and out";
+"str_positional"="Positional Animation";
+"str_nested"="Nested Animation";
+"str_constrained"="Constraint Animation";
+"str_Rock"="Rock the Boat";

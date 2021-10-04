@@ -1,0 +1,12 @@
+/* 
+  Localizable.strings
+  Rock the Boat
+
+  Created by Zheng, Minghui on 10/4/21.
+  
+*/
+"str_fade"="Desvanecerse dentro y fuera";
+"str_positional"="Animación posicional";
+"str_nested"="Animación anidada";
+"str_constrained"="Animación de restricción";
+"str_Rock"="Mover el bote";

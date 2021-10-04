@@ -17,9 +17,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var stackview: UIStackView!
     var animationCount = 0
     @IBOutlet weak var labelTopConstraint: NSLayoutConstraint!
-    
+    let boatModel = BoatModel()
+    var needsRecover = false
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        RockTheBoatLabel.text = NSLocalizedString("str_Rock", comment: "")
+        fadeAnimBtn.setTitle(NSLocalizedString("str_fade", comment: ""), for: .normal)
+        positionAnimBtn.setTitle(NSLocalizedString("str_positional", comment: ""), for: .normal)
+        nestedAnimBtn.setTitle(NSLocalizedString("str_nested", comment: ""), for: .normal)
+        constantAnimBtn.setTitle(NSLocalizedString("str_constrained", comment: ""), for: .normal)
 
     }
 
@@ -30,9 +36,18 @@ class ViewController: UIViewController {
         })
     }
     @IBAction func onPositionalAnim(_ sender: Any) {
-        UIView.animate(withDuration: 0.7, animations: {
-            self.stackview?.rotate(by: -Double.pi / 4, with: CGPoint(x: -0.3, y: 0.3))
-        })
+        if(needsRecover){
+            UIView.animate(withDuration: 0.7, animations: {
+                self.stackview?.rotate(by: 0, with: CGPoint(x: 0, y: 0))
+            })
+            needsRecover = boatModel.prositionalAnimRecover(needsRecover)
+        }else if(!needsRecover){
+            UIView.animate(withDuration: 0.7, animations: {
+                self.stackview?.rotate(by: Double.pi / 4, with: CGPoint(x: -0.3, y: 0.3))
+            })
+            needsRecover = boatModel.prositionalAnimRecover(needsRecover)
+        }
+        
     }
     
     @IBAction func nestedAnim(_ sender: Any) {
@@ -46,6 +61,9 @@ class ViewController: UIViewController {
                 UIView.animate(withDuration: 0.5, animations: {
                     self.boatImg?.rotate(by: 0.0, with: CGPoint(x: 0.5, y: -0.3))
                 }, completion: { _ in
+                    UIView.animate(withDuration: 0.5, animations: {
+                        self.boatImg?.rotate(by: 0.0, with: CGPoint(x: 0.5, y: -0.3))
+                    })
                 })
             })
         })
